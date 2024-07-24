@@ -1,0 +1,4 @@
+node_modules
+*.DS*
+public/build/bundle*
+.ipynb_checkpoints
