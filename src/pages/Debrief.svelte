@@ -3,6 +3,9 @@
 
 <script>
     import { db, params, serverTime } from '../utils.js';
+    import { createEventDispatcher } from 'svelte';
+
+    const dispatch = createEventDispatcher();
 
     // populating necessary variables
     export let subPath;
@@ -31,7 +34,7 @@
     let handed = '';
 
     const submitHIT = async () => {
-        try {
+            dispatch("complete")
             await db.doc(subPath).update({
                 age,
                 sex,
@@ -44,9 +47,7 @@
                 HIT_complete: serverTime
             });
 
-        } catch (error) {
-            console.error(error);
-        }
+        
     };
 </script>
 

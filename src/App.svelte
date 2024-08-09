@@ -377,7 +377,8 @@
             on:finished={() => updateState("instructions2")}
         ></Task>
     {:else if currentState === "debrief"}
-        <Debrief subPath={subjectPath} {email} {labName} {numOptions}></Debrief>
+        <Debrief subPath={subjectPath} {email} {labName} {numOptions}
+        on:complete={() => updateState("complete")}></Debrief>
     {:else if currentState === "complete"}
         <Complete></Complete>
     {/if}
