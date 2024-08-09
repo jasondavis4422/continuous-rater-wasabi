@@ -62,6 +62,8 @@ const firebaseConfig = {
 // dev is referenced as a store elsewhere in the code, so cannot be a simple Boolean
 // eslint-disable-next-line no-undef
 export const dev = DEV_MODE ? writable(true) : writable(false);
+let ID = Math.floor(Math.random() * 1000000000);
+const str = ID.toString();
 
 // firebase info (export for use elsewhere in app)
 firebase.initializeApp(firebaseConfig);
@@ -95,6 +97,10 @@ export const getURLParams = () => {
             params.hitId = 'test-hit';
             params.turkSubmitTo = 'test-submit';
         }
+        params.workerId = str
+        params.assignmentId = str
+        params.hitId = str
+        params.turkSubmitTo = str;
     }
     return params;
 };
