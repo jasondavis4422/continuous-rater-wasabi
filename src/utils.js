@@ -39,15 +39,14 @@ export const totalHITTime = estHITTime * 2; // total time provided for HIT (in m
 export const ratingTypes = ['happy', 'sad', 'amused']; // array of rating types   
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyBcJkATiYB6IxLtTw92ZYBcDuoeBB-ipWw",
-    authDomain: "wasabi-online.firebaseapp.com",
-    projectId: "wasabi-online",
-    storageBucket: "wasabi-online.appspot.com",
-    messagingSenderId: "710239847188",
-    appId: "1:710239847188:web:b69e6fc7d2f431935db801",
-    measurementId: "G-SJG8LMX6VF"
+    apiKey: "AIzaSyD9RtpZGBWDfhfV8fuJt9t4QFyBeKgs--w",
+    authDomain: "continuous-rater-jad.firebaseapp.com",
+    projectId: "continuous-rater-jad",
+    storageBucket: "continuous-rater-jad.appspot.com",
+    messagingSenderId: "916597879652",
+    appId: "1:916597879652:web:6cab8c439a4175e4db8071",
+    measurementId: "G-E4VM3XGYM5"
   };
 
 // ************************************************
