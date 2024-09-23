@@ -91,8 +91,7 @@
 	.container {
 		display: flex;
 		flex-direction: column;
-		align-items: left;
-		width: 200%;
+		align-items: center;
 	}
 </style>
 
