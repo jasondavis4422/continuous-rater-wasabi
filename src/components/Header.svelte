@@ -33,7 +33,7 @@
     {:else}
         <div class="banner mturk">
             <span>
-                If you have questions about this HIT please <a href={emailAddress}>email us</a>
+                If you have questions about this study please <a href={emailAddress}>email us</a>
             </span>
         </div>
     {/if}
