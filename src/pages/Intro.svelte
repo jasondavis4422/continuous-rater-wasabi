@@ -33,10 +33,10 @@
 
 
 <div class="container">
-    <h1>Thank you for accepting this HIT!</h1>
+    <h1>Thank you for accepting this study!</h1>
     <div class="text-box">
-        <p>You are given {totalHITTime} minutes to complete this HIT, but it should only take about {estHITTime}.</p>
-        <p>This HIT pays ${HITPay}.</p>
+        <p>You are given {totalHITTime} minutes to complete this study, but it should only take about {estHITTime}.</p>
+        <p>This study pays ${HITPay}.</p>
         <p>By clicking the button below, you will be taken to the experiment, 
         including complete instructions and an informed consent agreement.</p>
     </div>

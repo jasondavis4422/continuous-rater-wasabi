@@ -18,6 +18,6 @@ let code = 'CHYVCGGF'
     <p>Here is your confirmation code: {code}</p>
     <p>You will use this to go back to Prolific and complete the confirmation.</p>
         <p>.</p>
-    You have watched all possible movies. <strong>You may exit this HIT.</strong>
+    You have watched all possible movies. <strong>You may exit this study.</strong>
 </div>
 

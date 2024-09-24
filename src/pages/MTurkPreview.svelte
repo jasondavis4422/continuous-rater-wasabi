@@ -23,12 +23,12 @@
 
 
 <div class="container">
-    <h1>HIT Preview</h1>
+    <h1>Study Preview</h1>
     <div class="text-box">
-        <p>This HIT involves {studyTasks}.</p>
-        <p>You are given {totalHITTime} minutes to complete this HIT, but it should only take about {estHITTime}.</p>
-        <p>This HIT pays ${HITPay}.</p>
-        <p>Please accept this HIT if you are interested!</p>
+        <p>This study involves {studyTasks}.</p>
+        <p>You are given {totalHITTime} minutes to complete this study, but it should only take about {estHITTime}.</p>
+        <p>This study pays ${HITPay}.</p>
+        <p>Please accept this study if you are interested!</p>
     </div>
 </div>
 
