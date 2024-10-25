@@ -87,6 +87,10 @@
 			<p><strong>Up arrow key:</strong> move rating bar up</p>
 			<p><strong>Down arrow key:</strong> move rating bar down</p>
 			<p>Hold either arrow key to accelerate in that direction. Release key to reset acceleration</p>
+			<p>You are placing your rating along the scale anchors of "not at all" to "extremely". The dotted line in the middle is halfway between the two extremes
+				and is where ratings will begin. Ratings along this line correspond to "moderately". </p>
+		    <p>Thus, you are rating along the continuum of "not at all" - "moderately" - "extremely". </p>
+
 		</div>
 		<br>
 		<button class="back" on:click={handleBack}>Back</button>

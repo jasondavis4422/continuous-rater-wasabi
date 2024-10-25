@@ -98,7 +98,7 @@
 
 <style>
 	.rating-box {
-        width: 50%;
+        width: 75%;
         border: 1px solid #aaa;
         background-color: rgba(192, 192, 192, 0.384);
 		border-radius: 2px;
@@ -143,7 +143,7 @@
 <svelte:window on:keydown|preventDefault={handleKeyPress} on:keyup|preventDefault={handleKeyUp}/> 
 
 <article class="rating-box">
-    <div class="first-anchor">Most {ratingType}</div>
+    <div class="first-anchor">Extremely {ratingType}</div>
     <svg viewBox="0 0 {width} {height}">
          <line class="reference"
             x1=0
@@ -168,7 +168,7 @@
         {/each}
         <circle cx=0 cy={numbers[0] / (100) * height} r="5" />
     </svg> 
-    <div class="last-anchor">Least {ratingType}</div>
+    <div class="last-anchor">Not at all {ratingType}</div>
 </article>
 
 

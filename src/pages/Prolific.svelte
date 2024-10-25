@@ -64,7 +64,6 @@
                 dispatch("finished")
                 await db.doc(subPath).update({
                    Prolific_ID: prolific_id,
-                   Session_Num: answer
 
                 });    
 
@@ -112,24 +111,7 @@
                         placeholder="Prolific ID" />
                     </div>
                     <br>
-                </label> 
-                                       
-                <label class="label"
-            ><u>Which session is this?</u>
-            <div class="options">
-                <label class="radio">
-                    <input type="radio" bind:group={answer} value={1} />
-                    1
-                </label>
-              
-                <label class="radio">
-                    <input type="radio" bind:group={answer} value={2} />
-                    2
-                </label>
-                <br />
-            </div>
-        </label>
-
+            
                
                         
                 <div class="field-label">
