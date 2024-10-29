@@ -2,3 +2,4 @@ node_modules
 *.DS*
 public/build/bundle*
 .ipynb_checkpoints
+/Users/jasondavis/Documents/Downloads/wasabi_online
