@@ -32,6 +32,7 @@
     import Header from "./components/Header.svelte";
     import MTurkPreview from "./pages/MTurkPreview.svelte";
     import Prolific from "./pages/Prolific.svelte";
+    import Debrief3 from "./pages/Debrief3.svelte";
 
     // path details
     const ratingsPath = `${experiment}/ratings`;
@@ -274,6 +275,7 @@
             console.error(error);
         }
     };
+    let debriefIndex2 = 0;
 
     // registers rejected consent form
     const failedConsent = async () => {
@@ -296,7 +298,10 @@
         console.log("index");
         console.log(movieIndex);
     };
-
+    const increment3 = async () => {
+        debriefIndex2++;
+        console.log(debriefIndex2);
+    }
     // registers accepted consent form
     const agreedConsent = async () => {
         try {
@@ -384,8 +389,25 @@
          
             on:finished={() => increment()}
             on:debrief={() => updateState("debrief")}
-            on:finished={() => updateState("instructions2")}
+            on:finished={() => updateState("debrief3")}
         ></Task>
+        {:else if currentState === "debrief3"}
+        <Debrief3
+            {email}
+            {labName}
+            {numOptions}
+            movies={moviesRemaining}
+            links={movieLinks}
+            
+            index={debriefIndex2}
+            videoIndex = {movieIndex}
+            options={numOptions}
+            ratingType={currRating}
+            on:finished={() => increment3()}
+            on:botcheck={() => updateState("botcheck-task")}
+            on:finished={() => updateState("instructions2")}
+
+        />
     {:else if currentState === "debrief"}
         <Debrief subPath={subjectPath} {email} {labName} {numOptions}
         on:complete={() => updateState("complete")}></Debrief>
