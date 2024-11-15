@@ -1,5 +1,5 @@
 <script>
-let code = 'CHYVCGGF'
+let code = 'C25ZG3BV'
 </script>
 
 
