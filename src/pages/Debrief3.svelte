@@ -51,13 +51,13 @@
 		currVidSrc = links[index];
 	
         }
-        let Main_question = ['1. Which of the following topics was NOT discussed in the previous video?', '1.   Who is the biggest enemy of Kung Fury?'];
+        let Main_question = ['1. Which of the following topics was NOT mentioned or discussed in the previous video?', '1.   Who is the biggest enemy of Kung Fury?'];
 
-let Answer_a = ['A) Neural networks', 'A) The police department'];
-let Answer_b = ['B) Large language models', 'B) Barbariana'];
-let Answer_c = ['C) Linear algebra', 'C) An electronic computer']
-let Answer_d = ['D) Edge detection','D) Thor'];
-let Answer_e =['E) Learning', 'E) Adolf Hitler'];
+let Answer_a = ['A) Truman Doctrine', 'A) The police department'];
+let Answer_b = ['B) Spanish-American War', 'B) Barbariana'];
+let Answer_c = ['C) Vietnam and Korea', 'C) An electronic computer']
+let Answer_d = ['D) Berlin Wall','D) Thor'];
+let Answer_e =['E) Ronald Raegan', 'E) Adolf Hitler'];
 console.log(ratingDocPathway)
 
 
