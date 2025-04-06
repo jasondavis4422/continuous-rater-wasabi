@@ -30,15 +30,13 @@ export const studyTasks = 'watching videos and giving ratings'; // brief summary
 export const experiment = 'wasabi-online'; // name of experiment (should match collection name in firebase)
 
 // HIT variables
-export const HITPay = '1.00'; // pay for HIT completion (format as X.XX with no dollar sign)
-export const userGroup = 'Prolific Group Final (Event Segmentation) - 4/6/25'; // name of collection of participants for current HIT
-export const estHITTime = '60'; // estimated time to complete HIT (in minutes)
+export const HITPay = '1.00'; // pay for HIT completion (format as X.XX with no dollar sign
 export const userGroup = 'Prolific Group Final - 4/1/25' // for current HIT
 export const estHITTime = '45'; // estimated time to complete HIT (in minutes)
 export const totalHITTime = estHITTime * 2; // total time provided for HIT (in minutes)
 
 // stimuli variables      
-export const ratingTypes = ['neutral']; // array of rating types   
+export const ratingTypes = ['pleasant', 'unpleasant', 'calm', 'aroused', 'happy', 'sad', 'angry', 'disgusted', 'surprised', 'funny', 'afraid']; // array of rating types   
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
