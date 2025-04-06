@@ -33,69 +33,47 @@
         numbers = [...numbers, rating];
     }
     
-    let originalRating = rating; // to store the original rating value temporarily
+    const handleKeyUp = (e) => {
+        if (e.keyCode === 38 || e.keyCode === 40) {
+            // up and down arrow keys
+            stepSize = ogStepSize;
+        }
+    };
 
-// resets step size after key hold
-const handleKeyUp = (e) => {
-    if (e.keyCode === 38 || e.keyCode === 40) {
-        // up and down arrow keys
-        stepSize = ogStepSize;
-    }
-};
+    // moves rating value
+    const handleKeyPress = (e) => {
+        if (!paused) {
+            if (e.keyCode === 38) {
+                // up arrow
+                if (!(prevKeyCode === 38)) {
+                    stepSize = ogStepSize;
+                }
+                prevKeyCode = 38;
+                rating = Math.min(rating + stepSize, 100);
+                stepSize *= stepAccel;
 
-// moves rating value or sets event marker on spacebar
-const handleKeyPress = (e) => {
-    if (!paused) {
-        if (e.keyCode === 38) {
-            // up arrow
-            if (prevKeyCode !== 38) {
-                stepSize = ogStepSize;
-            }
-            prevKeyCode = 38;
-            rating = Math.min(rating + stepSize, 100);
-            stepSize *= stepAccel;
-
-            if (ratingBoxUse !== "demo page") {
-                let dictTime = Math.round(time);
-                let dictVal = Math.round(rating);
-                docRef.update({ [dictTime]: dictVal });
-            }
-        } else if (e.keyCode === 40) {
-            // down arrow
-            if (prevKeyCode !== 40) {
-                stepSize = ogStepSize;
-            }
-            prevKeyCode = 40;
-            rating = Math.max(rating - stepSize, 0);
-            stepSize *= stepAccel;
-
-            if (ratingBoxUse !== "demo page") {
-                let dictTime = Math.round(time);
-                let dictVal = Math.round(rating);
-                docRef.update({ [dictTime]: dictVal });
-            }
-        } else if (e.keyCode === 32) {
-            // spacebar: set temporary event boundary
-            originalRating = rating;         // store current rating
-            rating = 100;                    // set to 100 to indicate event boundary
-            if (ratingBoxUse !== "demo page") {
-                let dictTime = Math.round(time);
-                let dictVal = 100;
-                docRef.update({ [dictTime]: dictVal });
-            }
-
-            // reset to original after short delay (e.g., 200 ms)
-            setTimeout(() => {
-                rating = originalRating;
-                if (ratingBoxUse !== "demo page") {
+                if (ratingBoxUse != "demo page") {
                     let dictTime = Math.round(time);
                     let dictVal = Math.round(rating);
                     docRef.update({ [dictTime]: dictVal });
                 }
-            }, 200);
+            } else if (e.keyCode === 40) {
+                // down arrow
+                if (!(prevKeyCode === 40)) {
+                    stepSize = ogStepSize;
+                }
+                prevKeyCode = 40;
+                rating = Math.max(rating - stepSize, 0);
+                stepSize *= stepAccel;
+
+                if (ratingBoxUse != "demo page") {
+                    let dictTime = Math.round(time);
+                    let dictVal = Math.round(rating);
+                    docRef.update({ [dictTime]: dictVal });
+                }
+            }
         }
-    }
-};
+    };
 
     // updates numbers array for animation with most recent rating data
     const setNumbers = () => { 
