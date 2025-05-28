@@ -42,7 +42,7 @@
 	};
 	
 	function handleEnd() {
-		if (index != numVideos-1)
+		if (index != numVideos)
 		{
 	        dispatch('finished');
 		}
