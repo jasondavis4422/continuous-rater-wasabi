@@ -36,7 +36,7 @@ export const estHITTime = '45'; // estimated time to complete HIT (in minutes)
 export const totalHITTime = estHITTime * 2; // total time provided for HIT (in minutes)
 
 // stimuli variables      
-export const ratingTypes = ['pleasant', 'unpleasant', 'calm', 'aroused', 'happy', 'sad', 'angry', 'disgusted', 'surprised', 'funny', 'afraid']; // array of rating types   
+export const ratingTypes = ['pleasant', 'unpleasant', 'calm', 'aroused', 'happy', 'sad', 'angry', 'disgusted', 'surprised', 'funny', 'afraid', 'neutral']; // array of rating types   
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {

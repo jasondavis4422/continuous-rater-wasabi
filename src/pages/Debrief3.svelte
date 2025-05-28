@@ -51,13 +51,13 @@
 		currVidSrc = links[index];
 	
         }
-        let Main_question = ['1. Which of the following topics was NOT mentioned or discussed in the previous video?', '1.   Who is the biggest enemy of Kung Fury?'];
+        let Main_question = ['1. Which of the following topics was NOT mentioned or discussed in the previous video?', '1.   Who is the biggest enemy of Kung Fury?', 'Which animal was Kung Fury fighting in the animated section of the movie?'];
 
-let Answer_a = ['A) Truman Doctrine', 'A) The police department'];
-let Answer_b = ['B) Spanish-American War', 'B) Barbariana'];
-let Answer_c = ['C) Vietnam and Korea', 'C) An electronic computer']
-let Answer_d = ['D) Berlin Wall','D) Thor'];
-let Answer_e =['E) Ronald Raegan', 'E) Adolf Hitler'];
+let Answer_a = ['A) Truman Doctrine', 'A) The police department', 'A) A tiger'];
+let Answer_b = ['B) Spanish-American War', 'B) Barbariana', 'B) A dragon'];
+let Answer_c = ['C) Vietnam and Korea', 'C) An electronic computer', 'C) A shark']
+let Answer_d = ['D) Berlin Wall','D) Thor', 'D) A cobra'];
+let Answer_e =['E) Ronald Raegan', 'E) Adolf Hitler', 'E) A bear'];
 console.log(ratingDocPathway)
 
 
@@ -70,7 +70,9 @@ console.log(ratingDocPathway)
                 await db.doc(ratingDocPathway).update({
                 Comphrehension: answer
                 });    
-            }   else
+            }   
+            
+            else
 
                 dispatch("finished")
                 await db.doc(ratingDocPathway).update({

@@ -52,7 +52,7 @@
 	};
 
 	let ratingIndex = Math.floor(Math.random() * ratingTypes.length);
-	let numVideos = 2;
+	let numVideos = 3;
 	stimuliDoc.get().then(function (stimuliTable) {
 		for (var field in stimuliTable.data()) {
 			moviesRemaining.push(field);
