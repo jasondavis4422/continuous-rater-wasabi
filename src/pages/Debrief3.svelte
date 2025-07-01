@@ -58,7 +58,7 @@
         let Answer_b = ['B) Spanish-American War', 'B) Barbariana'];
         let Answer_c = ['C) Vietnam and Korea', 'C) An electronic computer']
         let Answer_d = ['D) Berlin Wall','D) Thor'];
-        let Answer_e =['E) Ronald Raegan', 'E) Adolf Hitler'];
+        let Answer_e =['E) Ronald Reagan', 'E) Adolf Hitler'];
         console.log(ratingDocPathway)
 
         const newPage = async () =>{   
