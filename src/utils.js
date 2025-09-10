@@ -22,21 +22,21 @@ import { writable } from 'svelte/store';
 // ************************************************
 
 // lab variables
-export const studyLocation = 'Hanover, NH'; // location of lab running mturk study
+export const studyLocation = 'Hanover, NH'; // location of lab running  study
 export const labName = 'Cognitive and Affective Neuroscience Laboratory'; // name of lab running HIT experiment 
-export const email = 'canlab.participate@gmail.com'; // lab email for mturk
-export const studyAim = 'to study emotional responses based on certain naturalistic stimuli'; // aim of mturk study 
-export const studyTasks = 'watching videos and giving ratings'; // brief summary of HIT task for consent form
+export const email = 'canlab.participate@gmail.com'; // lab email for 
+export const studyAim = 'to study subjective emotional experiences'; // aim of mturk study 
+export const studyTasks = 'providing moment-by-moment ratings of your emotional state to movies'; // brief summary of HIT task for consent form
 export const experiment = 'wasabi-online'; // name of experiment (should match collection name in firebase)
 
 // HIT variables
 export const HITPay = '1.00'; // pay for HIT completion (format as X.XX with no dollar sign
-export const userGroup = 'Kung Fury Study 3' // for current HIT
+export const userGroup = 'Kung Fury Study - September 2025' // for current HIT
 export const estHITTime = '45'; // estimated time to complete HIT (in minutes)
 export const totalHITTime = estHITTime * 2; // total time provided for HIT (in minutes)
 
 // stimuli variables      
-export const ratingTypes = ['pleasant', 'unpleasant', 'calm', 'aroused', 'happy', 'sad', 'angry', 'disgusted', 'surprised', 'funny', 'afraid', 'neutral']; // array of rating types   
+export const ratingTypes = ['pleasant', 'unpleasant', 'calm', 'aroused', 'happy', 'funny']; // array of rating types   
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {

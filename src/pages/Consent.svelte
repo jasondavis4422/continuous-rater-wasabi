@@ -76,6 +76,6 @@
         <h2>Do you understand and consent to these terms?</h2>
 
         <button class="yes" on:click={handleYes}>I agree</button>
-        <button class="no" on:click={handleNo}>No thanks, I do not want to do this HIT</button>
+        <button class="no" on:click={handleNo}>No thanks, I do not want to do this experiment</button>
     {/if}
 </div>

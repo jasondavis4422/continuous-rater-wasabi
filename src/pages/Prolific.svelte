@@ -96,14 +96,17 @@
     <div class="container">
         <div class="form-box">
             <form name="mturk" action={postURL} method='POST'>
-                <h2> After watching the video, we have a set of questions for you to answer.</h2>
-                <em> Please answer all questions and press submit once you've finished for another video. </em>
+                <h2> Prolific Identification </h2>
+                <p> Thank you for participating in this study. Please provide your Prolific ID below to help us ensure you are compensated for your time. </p>              
+                <em> Please input your ID correctly into the input box below. </em>
+                <br> <br>
 
                 <input type="hidden" name="assignmentId" id="assignmentId" value={currID}>
                 <input type="hidden" name="hidden_val_DONT_REMOVE" value="1">
 
                 <label class="label"><u>Prolific ID</u>
                     <div class="options">
+
                     <input
                         class="input lang-input"
                         type="text"
