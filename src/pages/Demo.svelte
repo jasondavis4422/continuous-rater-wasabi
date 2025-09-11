@@ -84,11 +84,7 @@
 	</div>
 	<div class="key-box">
 		<div class="keys">
-			<p><strong>Up arrow key:</strong> move rating bar up</p>
-			<p><strong>Down arrow key:</strong> move rating bar down</p>
-
-<p>Hold either arrow key to accelerate in that direction. Release key to reset acceleration.</p>
-<p>As you watch the movie, please use the up and down key to rate how <strong> {ratingType} </strong> you the movie makes you feel. You&rsquo;ll rate your emotion by moving to up or down along the sliding scale. Hold either arrow key to accelerate in that direction. Release key to reset acceleration.</p>
+			<p>As you watch the movie, please use the up and down key to rate how <strong> {ratingType} </strong> you the movie makes you feel. You&rsquo;ll rate your emotion by moving up or down along the sliding scale. Hold either arrow key to accelerate in that direction. Release key to reset acceleration.</p>
 <p>Anchor points of the scale are <strong>&quot;Not at all&quot; </strong> to  <strong> &quot;Extremely&quot; </strong>, so please input your ratings within this range. For example, let's go back to the example of the character saying something funny during the movie. If you found it very funny, move your rating up towards the &quot;Extremely&quot; anchor point. If you did not find it very funny, move your rating down towards the &quot;Not at all&quot; anchor point.</p>
 <p>Please make these ratings continuously, whenever you experience a change in your emotional state. </p>
 

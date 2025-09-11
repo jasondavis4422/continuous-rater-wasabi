@@ -13,6 +13,8 @@
 	export let ratingType;
 	let paused = true;
 	let rating = 50.0;
+    let numVideos = 3;
+
 
 	export let movies;
 	export let options;
@@ -42,17 +44,16 @@
 	};
 	
 	function handleEnd() {
-		if (index != numVideos-1)
+		if (index < numVideos)
 		{
 	        dispatch('finished');
 		}
-		else{
+		if (index >= numVideos) {
 			dispatch('debrief');
 		}
 	};
 
 	let ratingIndex = Math.floor(Math.random() * ratingTypes.length);
-	let numVideos = 3;
 	stimuliDoc.get().then(function (stimuliTable) {
 		for (var field in stimuliTable.data()) {
 			moviesRemaining.push(field);

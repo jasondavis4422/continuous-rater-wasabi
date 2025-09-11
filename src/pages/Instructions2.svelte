@@ -7,7 +7,7 @@
   // Add/remove items here to create more instructions pages
   
   const instructions = [
-    'Click the button below if you would like to proceed to the video. If you have already watched the first video clip, use the button again to proceed to the next video clip. Your video will appear shortly.'
+    'Click the button below if you would like to proceed to the video. If you have already watched the first video clip, use the button again to proceed to the next video clip. Your video will appear shortly. </p> <p> Remember the corresponding keys: </p> <p> <strong>Up arrow key:</strong> move rating bar up</p><p><strong>Down arrow key:</strong> move rating bar down</p>'
   ];
 
   const dispatch = createEventDispatcher();

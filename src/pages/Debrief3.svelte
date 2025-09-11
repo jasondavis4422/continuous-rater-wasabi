@@ -9,7 +9,6 @@
   export let videoIndex;
   export let ratingType;
   export let movies;
-  export let options;
   export let links;
   export let index;
 
@@ -23,12 +22,11 @@
   let currVidSrc;
   let ratingDocPathway;
 
-  if (options > 0) {
     currVid = movies[index];
     let vidPlusRating = `${currVid}-${ratingType}`;
     ratingDocPathway = `${ratingsPath}/${params.workerId}/${vidPlusRating}`;
     currVidSrc = links[index];
-  }
+  
 
   // Provide five question strings for the current video (index into arrays by videoIndex-1)
   let Main_questions = [
@@ -47,14 +45,14 @@
       '3. Who is Hackerman and what role does he play early on?',
       '4. How does Kung Fury get his nickname?',
       '5. What is the significance of the time machine in the first half of the movie?'
-    ]
+    ],
     // video 3: if you have a third video, add five questions; otherwise placeholders
     [
       '1. What major confrontation occurs near the end of the film?',
       '2. Which allies join Kung Fury in the final battle?',
-      '3. How is the tone of the film and action resolved at the very end?',
+      '3. What does Kung Fury use to stay in contact with the two women?',
       '4. What role does Hackerman play in the climax of the film?',
-      '5. Which of the following best describes the use of historical and fantastical elements in the second half of the film?'
+      '5. Who saves Adolf Hitler from dying?'
     ]
   ];
 
@@ -64,31 +62,31 @@
   let Answer_a = [
     ['A) 20','A) 40','A) not very frequently','A) 20','A) Your overall emotional state'],
     ['A) The police department','A) His dojo being destroyed','A) A corrupt cop who betrays Kung Fury','A) He wins a city-wide tournament','A) It is merely a background prop with no real use'],
-    ['A) Kung Fury fights his former mentor','A) Only Hackerman arrives to help','A) It ends with a tragic, somber farewell','A) He betrays Kung Fury and joins the villains','A) Strictly historically accurate depiction of WWII']
+    ['A) Kung Fury fights his former mentor','A) Only Hackerman arrives to help','A) A transportable, cellular phone','A) He betrays Kung Fury and joins the villains','A) intelligent computer hacker']
   ];
 
   let Answer_b = [
     ['B) 40','B) 60','B) never at all','B) 10 ','B) Your moment by moment subjective emotional experience'],
     ['B) Barbariana','B) His mentor abandoning him','B) A rival martial artist challenging Kung Fury','B) He kills a Viking with his bare hands and is praised by colleagues','B) It is used to transport Kung Fury to a secret island'],
-    ['B) B) Kung Fury duels Hackerman in cyberspace','B) Several allies including Vikings, a T-Rex, and other time-displaced fighters','B) Kung Fury is transported back to the 1940s permanently','B) He is captured and never seen again','B) Purely grounded science fiction with no humor']
+    ['B) Kung Fury duels Hackerman in cyberspace','B) Several allies including Vikings, a T-Rex, and other time-displaced fighters','B) An online video platform','B) He is captured and never seen again','B) A golden eagle']
   ];
 
   let Answer_c = [
     ['C) 100','C) 0','C) moment-by moment','C) 5','C) The emotional state of your friend'],
-    ['C) An electronic computer','C) A bank robbery gone wrong','C) A hacker who uses computers to help send Kung Fury back in time','C) He defeats the entire mafia','C) It is s used to travel back in time to fight Adolf Hitler'],
-    ['C) Kung Fury battles Adolf Hitler (Kung Führer)','C) A squad of modern SWAT officers','C) It concludes with over-the-top victorious celebration and humorous, self-aware closure','C) He assists with time/tech manipulation to support the victory','C) A playful mash-up of history, myth, and absurd fantasy for comedic effect']
+    ['C) An electronic computer','C) A bank robbery gone wrong','C) A hacker who uses computers to help send Kung Fury back in time','C) He defeats the entire mafia','C) It is used to travel back in time to fight Adolf Hitler'],
+    ['C) Kung Fury battles Adolf Hitler (Kung Führer)','C) A squad of modern SWAT officers','C) He does not stay in contact with the two women','C) He assists with time/tech manipulation to support the victory','C) A giant dinosaur']
   ];
 
   let Answer_d = [
     ['D) 0','D) 30','D) somewhat frequently','D) 15','D) The sociality of the main character'],
     ['D) Thor','D) A Nazi Colonel killing his police partner','D) The abusive trainer of Kung Fury','D) He rescues the president','D) It is stolen by the Viking and never recovered'],
-    ['D) Kung Fury faces a giant dragon','D) Just his original police precinct','D) The final scene sets up a dark cliffhanger','D) He reveals he is actually the main villain','D) A documentary-style examination of time travel ethics']
+    ['D) Kung Fury faces a giant dragon','D) Just his original police precinct','D) A landline','D) He reveals he is actually the main villain','D) Kung Fury']
   ];
 
   let Answer_e = [
     ['E) 60','E) 100','E) Ratings were not necessary','E) 100','E) Whether the side character is tall or short'],
     ['E) Adolf Hitler','E) A rival fighter defeating him','E) A government agent tracking Nazis','E) He masters a secret martial art','E) It malfunctions and leaves Kung Fury trapped in the present'],
-    ['E) Kung Fury is arrested by the police','E) No one — he fights alone','E) The movie switches to a romantic subplot resolution','E) He fights Kung Fury hand-to-hand','E) A quiet, realistic drama about consequences']
+    ['E) Kung Fury is arrested by the police','E) No one — he fights alone','E) A physical mail service','E) He fights Kung Fury hand-to-hand','E) A giant robot']
   ];
 
   // Answers array for five questions; initialize to empty strings
@@ -122,10 +120,10 @@
       });
 
       // dispatch event depending on botcheck logic
-      if (videoIndex % botCheck === 0 && videoIndex !== numVideos) {
-        dispatch('botcheck');
-      } else {
+      if (videoIndex < numVideos) {
         dispatch('finished');
+      } else {
+        dispatch('debrief');
       }
 
       // If you want to continue to the POST URL (e.g., external submit),

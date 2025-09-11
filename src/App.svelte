@@ -398,13 +398,12 @@
             {numOptions}
             movies={moviesRemaining}
             links={movieLinks}
-            
             index={debriefIndex2}
             videoIndex = {movieIndex}
             options={numOptions}
             ratingType={currRating}
             on:finished={() => increment3()}
-            on:botcheck={() => updateState("botcheck-task")}
+            on:debrief={() => updateState("debrief")}
             on:finished={() => updateState("instructions2")}
 
         />
