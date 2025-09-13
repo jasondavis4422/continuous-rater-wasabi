@@ -11,6 +11,7 @@
   export let movies;
   export let links;
   export let index;
+  export let options;
 
   let emailAddress = "mailto:" + email;
   let currID = params.assignmentId;
@@ -22,11 +23,17 @@
   let currVidSrc;
   let ratingDocPathway;
 
+if (options > 0) {
     currVid = movies[index];
     let vidPlusRating = `${currVid}-${ratingType}`;
     ratingDocPathway = `${ratingsPath}/${params.workerId}/${vidPlusRating}`;
     currVidSrc = links[index];
-  
+} else {
+    currVid = movies[videoIndex - 1];
+    let vidPlusRating = `${currVid}-${ratingType}`;
+    ratingDocPathway = `${ratingsPath}/${params.workerId}/${vidPlusRating}`;
+    currVidSrc = links[videoIndex - 1];
+}
 
   // Provide five question strings for the current video (index into arrays by videoIndex-1)
   let Main_questions = [
