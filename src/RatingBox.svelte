@@ -14,7 +14,7 @@
     let height = "200";
     let n = width; // number of points displayed in graphic
     let ogStepSize = 2;
-    let stepAccel = 1.0;
+    let stepAccel = 1.5;
     let opacity = 0;
     let docRef;
     let prevKeyCode;
