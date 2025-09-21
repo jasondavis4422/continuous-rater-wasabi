@@ -3,11 +3,12 @@
 <script>
   // This is the Instructions page. It loops over the instructions array as a user reads and when click to the last page it notifies the main App.svelte component by dispatching a 'finished' event. When the last page of the instructions are reached the forward button turns into a "Take Quiz" button, but currently there is no quiz and it goes straight to the experiment
   import { createEventDispatcher } from 'svelte';
+  export let ratingType;
 
   // Add/remove items here to create more instructions pages
   
   const instructions = [
-    'Click the button below if you would like to proceed to the video. If you have already watched the first video clip, use the button again to proceed to the next video clip. Your video will appear shortly. </p> <p> Remember the corresponding keys: </p> <p> <strong>Up arrow key:</strong> move rating bar up</p><p><strong>Down arrow key:</strong> move rating bar down</p>'
+    'Click the button below if you would like to proceed to the video. If you have already watched the first video clip, use the button again to proceed to the next video clip. Your video will appear shortly. </p> <p> Remember the corresponding keys: </p> <p> <strong>Up arrow key:</strong> move rating bar up</p><p><strong>Down arrow key:</strong> move rating bar down</p> </p> <p> <strong> REMEMBER: </strong> </p> <p> You are rating the following emotion: <strong> ' + ratingType + ' </strong> </p> <p> Please click the button below to proceed when you are ready. </p>'
   ];
 
   const dispatch = createEventDispatcher();

@@ -64,10 +64,7 @@
             vary in emotional content. If any of the media presented should make you feel too uncomfortable to 
             continue with the study, you are free to immediately withdraw your participation without giving up payment
             (send us an email <a href="mailto:{email}">here</a> after withdrawing for payment information).
-            To be clear: you may immediately end your participation if any aspect of the research procedure makes you 
-            too uncomfortable to continue. Lastly, if you have any discomfort or concerns after viewing the media, you 
-            are also encouraged to contact the principal investigator <a href="mailto:{email}">here</a>.</p>
-
+ 
             <p>The information collected will be anonymous and no identifying information will be stored with the 
             data collected during the experiment. Identifying information will not be used in any presentation or 
             paper written about this project and such presentations will represent the aggregation of data from groups of people.</p>

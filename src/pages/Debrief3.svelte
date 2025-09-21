@@ -42,7 +42,7 @@ if (options > 0) {
       '1. What is the lowest anchor point on the rating scale?',
       '2. What is the highest anchor point on the rating scale?',
       '3. How frequently should you rate your emotional experience?',
-      '4. How many rating points did you move the scale between in the training video?',
+      '4. How many rating points did we ask you to fluctuate between in the training video?',
       '5. What are you rating while watching the movie?'
     ],
     // video 2: five questions (placeholder text)

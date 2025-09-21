@@ -374,7 +374,8 @@
             on:finished={() => updateState("instructions2")}
         />
     {:else if currentState === "instructions2"}
-        <Instructions2
+        <Instructions2        
+            ratingType={currRating}
             on:back={() => updateState("demo")}
             on:finished={() => updateState("task")}
         />
